@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/menu.css" />
+
+    <!--=============== CHART JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>CIC</title>
+  </head>
+
+  <body>
+    <header class="header" id="header">
+      <div class="header__container">
+        <!-- Links de navegação à esquerda -->
+        <div class="header__links">
+            <nav class="menu">
+                <ul>
+                  <li>
+                    <a id="overview-link" class="menu__link" href="index.html"
+                      >Overview</a
+                    >
+                  </li>
+                  <li>
+                    <a id="controle-link" class="menu__link" href="lista.html"
+                      >Lista</a
+                    >
+                  </li>
+                
+                
+                  <li>
+                    <a id="arquivo-link" class="menu__link" href="controle.html"
+                      >Controle</a
+                    >
+                  </li>
+
+                  <li>
+                    <a id="biblioteca-link" class="menu__link " href="biblioteca.html"
+                      >Biblioteca</a
+                    >
+                  </li>
+                  
+                </ul>
+              </nav>
+        </div>
+
+        <!-- Logo e ícones à direita -->
+        <div class="header__right">
+          <a href="#" class="header__logo">
+            <div class="header__user">
+              <img
+                class="header__logo-img"
+                src="assets/img/perfil.png"
+                alt="profile image"
+              />
+            </div>
+          </a>
+
+          <ul class="menu__icons-right">
+
+            <li class="sidebar__actions button">
+              <button class="menu__icons-link">
+                <i class="ri-moon-clear-fill" id="theme-button-1">     
+                </i>
+              </button>
+            </li>
+
+
+            <li>
+              <a class="menu__icons-link" href="#contato">
+                <i class="ri-question-line"></i>
+              </a>
+            </li>
+
+          
+            <li>
+              <a class="menu__icons-link" href="#contato">
+                <i class="ri-settings-3-fill"></i>
+              </a>
+            </li>
+            <li>
+              <a class="menu__icons-link" href="#contato">
+                <i class="ri-notification-3-line"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!--=============== SIDEBAR ===============-->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__container">
+          <div class="sidebar__user">
+            <div class="sidebar__info">
+              <!-- Adicione a foto do perfil ou qualquer outra informação do usuário aqui -->
+            </div>
+    
+            <a href="#">
+              <h1 class="menu_text">
+                
+                <button class="header__toggle" id="header-toggle">
+                  <img class="logo-nav" src="./assets/img/cic.png" alt="">
+                </button>
+  
+              </h1>
+            </a>
+          </div>
+    
+          <a href="index.html" class="sidebar__link overview-link ">
+            <i class="ri-dashboard-fill"></i>
+            <span>Overview</span>
+          </a>
+          <div class="sidebar__content">
+            <div>
+              <div class="sidebar__list">
+    
+                <a href="lista.html" class="sidebar__link">
+                  <i class="ri-list-check"></i>
+                  <span>Lista</span>
+                </a>
+    
+                <a href="controle.html" class="sidebar__link active-link">
+                  <i class="ri-file-line"></i>
+                  <span>Controle</span>
+                </a>
+    
+                <a href="biblioteca.html" class="sidebar__link">
+                  <i class="ri-git-repository-line"></i>
+                  <span>Biblioteca</span>
+                </a>
+    
+              </div>
+            </div>
+    
+            <hr />
+    
+            <div>
+              <h3 class="sidebar__title"></h3>
+    
+              <div class="sidebar__list">
+                <a href="#" class="sidebar__link">
+                  <i class="ri-settings-3-fill"></i>
+                  <span>Configurações</span>
+                </a>
+    
+                <a href="#" class="sidebar__link">
+                  <i class="ri-user-fill"></i>
+                  <span>Usuário</span>
+                </a>
+    
+                <a href="#" class="sidebar__link">
+                  <i class="ri-question-line"></i>
+                  <span>Help</span>
+                </a>
+    
+                <!-- Link "Tema" com o ID e classes corretos -->
+                <div class="sidebar__actions">
+                  <button>
+                    <i class="ri-moon-clear-fill sidebar__link sidebar__theme" id="theme-button-2">
+                      <span>Tema</span>
+                    </i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </nav>
+
+        <!--=============== MAIN ===============-->
+        <main class="main container" id="main">
+          <!-- Menu -->
+          <nav class="menu__container">
+            <ul class="menu__dash">
+              <li>
+                <a class="menu__dash-link3   active geral " href="#dashboard">GERAL</a>
+              </li>
+              <li><a class="menu__dash-link2" href="confins.html">COFINS</a></li>
+              <li><a class="menu__dash-link2" href="#">IRPF</a></li>
+              <li><a class="menu__dash-link2" href="#">IRPJ</a></li>
+              <li><a class="menu__dash-link2" href="#">PIS</a></li>
+              <li><a class="menu__dash-link2" href="#">PASEP</a></li>
+              <li><a class="menu__dash-link2" href="#">CSS</a></li>
+              <li class="icon">
+                <div class="input__menu">
+                  <a class="menu__dash-link" href="#">
+                    <i class="ri-search-line icon-1"></i>
+                    <input
+                      class="input-container"
+                      type="text"
+                      name="username"
+                      placeholder="Procure Aqui"
+                    />
+                    <i class="ri-search-line icon-2"></i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#" class="header__logo2">
+              <div class="header__user2">
+                <img
+                  class="header__logo-img2"
+                  src="assets/img/perfil.png"
+                  alt="profile image"
+                />
+              </div>
+            </a>
+          </nav>
+
+          <!-- Popup -->
+          <div id="popup">
+            <div class="popup__title">
+              <h2>Selecione para visualizar os dados</h2>
+              <div class="popup__close" onclick="fecharPopup()">
+                <i class="ri-close-circle-line"></i>
+              </div>
+            </div>
+            <p class="popup__subtitle">
+              Filtre de acordo com a sua necessidade
+            </p>
+
+            <div class="popup__escolha">
+              <p>Gráficos - Erros de apuração</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  checked
+                  data-target=".grafico"
+                  onchange="toggleImagem(this)"
+                />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="popup__imagem grafico">
+              <img src="assets/img/popup/grafico.png" alt="gráfico de donut" />
+            </div>
+
+            <hr />
+
+            <div class="popup__escolha">
+              <p>Saldo acumulado</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  checked
+                  data-target=".saldo"
+                  onchange="toggleImagem(this)"
+                />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="popup__imagem saldo">
+              <img
+                src="assets/img/popup/debito.jpg"
+                alt="card de saldo de débito"
+              />
+              <img
+                src="assets/img/popup/credito.jpg"
+                alt="card de saldo de crédito"
+              />
+            </div>
+
+            <hr />
+
+            <div class="popup__escolha">
+              <p>Priorização de tarefas</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  checked
+                  data-target=".prioridade"
+                  onchange="toggleImagem(this)"
+                />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="popup__imagem prioridade">
+              <img
+                src="assets/img/popup/prioridade.jpg"
+                alt="card de prioridade de tarefas"
+              />
+            </div>
+
+            <hr />
+
+            <div class="popup__escolha">
+              <p>Divergências</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  checked
+                  data-target=".divergencias"
+                  onchange="toggleImagem(this)"
+                />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="popup__imagem divergencias">
+              <img
+                src="assets/img/popup/divergencias.jpg"
+                alt="card de lista de divergências"
+              />
+            </div>
+
+            <hr />
+
+            <button class="popup__cancelar" onclick="fecharPopup()">
+              Cancelar
+            </button>
+            <button class="popup__confirmar" onclick="confirmarEscolha()">
+              Confirmar
+            </button>
+          </div>
+
+          <div id="overlay"></div>
+
+         
+
+          
+
+          <!--=============== MAIN DASHBOARD ===============-->
+          <section class="dashboard-tela2"  id="dashboard-container">
+            <div class="dashboard-select" id="dashboard-select">
+              <h1 id="dashboard-message">Detalhes da tarefa</h1>
+              <select name="select">
+                <option value="valor1" selected>Resolvido</option>
+                <option value="valor2">Verificar</option>
+              </select>
+              <div id="dashboard-calendario">
+                <i class="ri-calendar-line"></i>
+                <p id="dashboard-message-paragraph">22/05/2024</p>
+              </div>
+            </div>
+
+            <div id="dashboard-number">
+              <p>
+                Número de ID
+                <strong><span id="dashboard-id">0005000</span></strong>
+              </p>
+            </div>
+
+            <div class="dashboard-valor">
+              <div class="dashboard-valor-item">
+                <p>Valor da Nota</p>
+                <strong><p>R$90.000</p></strong>
+              </div>
+              <div class="dashboard-valor-item">
+                <p>Valor do Governo</p>
+                <strong><p>R$50.000</p></strong>
+              </div>
+            </div>
+
+            <div id="dashboard-local">
+              <h2>Município</h2>
+              <h2>Crédito</h2>
+              <h2>Diferença</h2>
+            </div>
+
+            <div id="dashboard-dados">
+              <h2>São Paulo</h2>
+              <h2>R$40.000</h2>
+              <h2>R$----</h2>
+            </div>
+
+            <h3 id="dashboard-description">Descrição</h3>
+            <article id="dashboard-article">
+              A COFINS (Contribuição para o Financiamento da Seguridade Social)
+              é um tributo federal brasileiro que incide sobre a receita bruta
+              das empresas e financia áreas como saúde pública, previdência e
+              assistência social. Ela pode ser recolhida sob dois regimes: o
+              cumulativo, com alíquota de 3%, aplicável a empresas do lucro
+              presumido e sem possibilidade de dedução de créditos; e o não
+              cumulativo, com alíquota de 7,6%, para empresas do lucro real,
+              permitindo deduzir créditos de insumos.
+            </article>
+
+            <input id="dashboard-upload" type="file" name="fileupload" />
+
+            <div id="dashboard-enviar">
+              <div id="dashboard-excel">
+                <img src="assets/img/icons/excel.svg" alt="ícone do excel" />
+                <p>Exportar Dados</p>
+              </div>
+              <div id="dashboard-salvar">
+                <p>Salvar</p>
+              </div>
+            </div>
+          </section>
+
+      
+
+          
+          
+          <section  class="controle-tela hidden">
+            <h1 id="controle-message" class="hidden">
+              Biblioteca de lições aprendidas
+            </h1>
+            <p id="controle-message-paragraph" class="hidden">
+              Consulte as principais dúvidas sobre os impostos
+            </p>
+
+            <div id="controle-search">
+              <div class="controle-pesquisas">
+                <img src="assets/img/icons/lupa.svg" alt="ícone de lupa" />
+                <p>Pesquisar</p>
+              </div>
+              <div class="controle-procurar">
+                <p>Procurar</p>
+              </div>
+            </div>
+
+            <div id="controle-popular">
+              <h1>POPULAR:</h1>
+              <p>Qual é a % do imposto IRPF?</p>
+              <p>Qual é a % do imposto ISS?</p>
+            </div>
+
+            <div id="controle-cards-1">
+              <div id="controle-card-cofins">
+                <div id="card-titulo-cofins">
+                  <div id="card-icon-cofins">
+                    <img
+                      src="assets/img/icons/frame.svg"
+                      alt="ícone do card na biblioteca"
+                    />
+                  </div>
+                  <h1>
+                    <a
+                      href="https://docs.google.com/spreadsheets/d/1OUk2d0nU8Ak-jBiF5teC0h5BvIStD_9G/edit?usp=sharing&ouid=106101464830344703865&rtpof=true&sd=true"
+                      target="_blank"
+                      >Cofins</a
+                    >
+                  </h1>
+                </div>
+                <div id="card-texto-cofins-1">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>Como a não cumulatividade funciona na prática?</p>
+                </div>
+                <div id="card-texto-cofins-2">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>
+                    Quais são as principais dificuldades na apuração do crédito?
+                  </p>
+                </div>
+              </div>
+
+              <div id="controle-card-irpf">
+                <div id="card-titulo-irpf">
+                  <div id="card-icon-irpf">
+                    <img
+                      src="assets/img/icons/frame.svg"
+                      alt="ícone do card na biblioteca"
+                    />
+                  </div>
+                  <h1>
+                    <a
+                      href="https://docs.google.com/spreadsheets/d/1OmzAi4hdDOEugygyqli80cK2QFbS7xGq/edit?usp=sharing&ouid=106101464830344703865&rtpof=true&sd=true"
+                      target="_blank"
+                      >IRPF</a
+                    >
+                  </h1>
+                </div>
+                <div id="card-texto-irpf-1">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>
+                    Como tratar os rendimentos de pessoas físicas que atuam como
+                    profissionais liberais?
+                  </p>
+                </div>
+                <div id="card-texto-irpf-2">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>
+                    Quais as implicações do IRPF para os sócios de empresas?
+                  </p>
+                </div>
+              </div>
+
+              <div id="controle-card-irpj">
+                <div id="card-titulo-irpj">
+                  <div id="card-icon-irpj">
+                    <img
+                      src="assets/img/icons/frame.svg"
+                      alt="ícone do card na biblioteca"
+                    />
+                  </div>
+                  <h1>
+                    <a
+                      href="https://docs.google.com/spreadsheets/d/1OjfV1lY6S14ZELu98KA3Q-DU_ioe-mRn/edit?usp=sharing&ouid=106101464830344703865&rtpof=true&sd=true"
+                      target="_blank"
+                      >IRPJ</a
+                    >
+                  </h1>
+                </div>
+                <div id="card-texto-irpj-1">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>Como tratar a base de cálculo negativa do IRPJ?</p>
+                </div>
+                <div id="card-texto-irpj-2">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>Impacto da reforma tributária no IRPJ</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="controle-cards-2">
+              <div id="controle-card-pis">
+                <div id="card-titulo-pis">
+                  <div id="card-icon-pis">
+                    <img
+                      src="assets/img/icons/frame.svg"
+                      alt="ícone do card na biblioteca"
+                    />
+                  </div>
+                  <h1>
+                    <a
+                      href="https://docs.google.com/spreadsheets/d/1OjVzE4Ry7chYN748ZAVyin4U8qxLCZ2W/edit?usp=sharing&ouid=106101464830344703865&rtpof=true&sd=true"
+                      target="_blank"
+                      >PIS</a
+                    >
+                  </h1>
+                </div>
+                <div id="card-texto-pis-1">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>Base de cálculo do PIS para diferentes setores</p>
+                </div>
+                <div id="card-texto-pis-2">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>PIS e o Simples Nacional</p>
+                </div>
+              </div>
+
+              <div id="controle-card-pasep">
+                <div id="card-titulo-pasep">
+                  <div id="card-icon-pasep">
+                    <img
+                      src="assets/img/icons/frame.svg"
+                      alt="ícone do card na biblioteca"
+                    />
+                  </div>
+                  <h1>
+                    <a
+                      href="https://docs.google.com/spreadsheets/d/1Oi05ctwG9d9IquhjDoy3a_IhyPU1ZBv9/edit?usp=sharing&ouid=106101464830344703865&rtpof=true&sd=true"
+                      target="_blank"
+                      >PASEP</a
+                    >
+                  </h1>
+                </div>
+                <div id="card-texto-pasep-1">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>PASEP e a reforma da previdência</p>
+                </div>
+                <div id="card-texto-pasep-2">
+                  <img
+                    src="assets/img/icons/documento.svg"
+                    alt="ícone de documento na biblioteca"
+                  />
+                  <p>Como consultar o saldo do PASEP</p>
+                </div>
+              </div>
+            </div>
+            
+          </section>
+
+     
+
+    <section  class="dashboard-dados" id="dashboard-input">
+      <div class="dashboard-cadastro"> <!-- Contêiner principal para o conteúdo -->
+        <h2 class="dashboard-titulo">Lista de lições aprendidas</h2> <!-- Título da seção -->
+        <p class="id">Número de ID <a href="#">0005000</a></p> <!-- Parágrafo para exibir o ID, com um link -->
+
+        <div class="dashboard-selecionar">
+          <label class="dashboard-assunto" for="assunto">Selecione o assunto</label>
+          <!-- Rótulo para o seletor de assuntos -->
+          <select id="assunto"> <!-- Menu suspenso para seleção de assunto -->
+            <option value="IRPJ">IRPJ</option>
+            <option value="PIS">PIS</option>
+            <option value="IRPF">IRPF</option>
+            <option value="COFINS">COFINS</option>
+            <option value="CSS">CSS</option>
+          </select>
+        </div>
+
+        <div class="dashboard-desc">
+          <label for="descricao">Descrição</label> <!-- Rótulo para a área de texto de descrição -->
+          <textarea id="dashboard-descricao" rows="5" placeholder="Escreva aqui..."></textarea>
+          <!-- Área de texto para descrição -->
+        </div>
+        <button class="dashboard-finalizar">Finalizar</button> <!-- Botão para finalizar -->
+      </div>
+    </section>
+    
+
+
+
+        </main>
+      </div>
+    </nav>
+  </body>
+
+  <script src="/assets/js/menu.js"></script>
+  
+  
+
+</html>

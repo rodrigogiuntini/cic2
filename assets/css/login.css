@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+body {
+  font-family: "Lexend", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Ocupa toda a altura da viewport */
+  margin: 0; /* Remove margens padrão */
+  gap: 2rem;
+  overflow: hidden; /* Impede o scroll */
+}
+
+.logo {
+  width: auto;
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 2rem; /* Ajuste conforme necessário */
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dados-email,
+.dados-senha {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dados-email label,
+.dados-senha label {
+  margin-bottom: 0.5rem;
+}
+
+.dados-login {
+  background-color: #0064f7;
+  border-radius: 5px;
+  margin-top: 2rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.dados-login:hover {
+  transition: ease-in-out 0.5s;
+  background-color: #0547ab;
+}
+
+.dados-login p {
+  margin: 1rem 0;
+}
+
+.email,
+.senha {
+  resize: none;
+  height: 3rem; /* Altura ajustada */
+  width: 30rem;
+  border-radius: 5px;
+  border: 0.3px solid rgba(39, 39, 39, 0.341);
+  padding-left: 0.5rem;
+  opacity: 0.8;
+  text-align: left;
+}
+
+.email::placeholder,
+.senha::placeholder {
+  text-align: left;
+  color: rgba(39, 39, 39, 0.5);
+}
+
+/* Media Queries para Responsividade */
+
+/* Tablets (largura entre 768px e 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .logo {
+    width: 30%;
+  }
+
+  .dados-email label,
+  .dados-senha label {
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte */
+  }
+
+  input {
+    font-size: 1.2rem; /* Aumenta a fonte dos inputs */
+    height: 3.5rem; /* Aumenta a altura dos inputs */
+  }
+
+  .dados-login p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smartphones (largura menor que 768px) */
+@media (max-width: 767px) {
+  .logo {
+    width: 50%;
+  }
+
+  .dados-email label,
+  .dados-senha label {
+    font-size: 1.4rem;
+  }
+
+  .email,
+  .senha {
+    font-size: 1.3rem;
+    height: 3.2rem; /* Aumenta a altura dos inputs */
+    width: 25rem;
+  }
+
+  .dados-login p {
+    font-size: 1.6rem;
+  }
+
+  .dados {
+    max-width: 90%;
+    margin-bottom: 7rem;
+  }
+
+  
+}
+
+
+@media (max-width: 490px) {
+  .logo {
+    width: 50%;
+    margin-top: 10rem;
+  }
+
+  .email,
+  .senha {
+    font-size: 1.2rem;
+    height: 3rem; /* Aumenta a altura dos inputs */
+    width: 100%;
+    margin-top: 2rem;
+  }
+ 
+  .dados-login p{
+    width: 10px;
+  }
+
+  .dados-login{
+    width: 20rem;
+    
+  }
+    
+  .dados-login p {
+    font-size: 1.4rem;
+    text-align: center;
+    
+  }
+
+  p {
+    
+    padding-right: 3rem;
+  }
+
+
+  
+}
